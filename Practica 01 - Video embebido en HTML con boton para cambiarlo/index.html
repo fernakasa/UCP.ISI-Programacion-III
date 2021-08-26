@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 1 - Videito</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .vid{
+            object-fit: cover;
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .texto{
+            position: absolute;  
+            top: 70%;
+            left: 10%;
+            color: rgb(26, 23, 23);
+            text-shadow: -1px -1px 0 #ffff00, 1px -1px 0 #ffff00, -1px 1px 0 #ffff00, 1px 1px 0 #ffff00;
+        }
+    </style>
+</head>
+<body>
+    <div class="ctnbox">
+        <video id="vid" class="vid" src="./video/neon.mp4" type="video/mp4" autoplay loop muted></video>
+    </div>
+    <div class="texto">
+        <h1 id="btnTxt">Fernando G. Sanchez</h1>
+        <h2>Universidad de la Cuenca del Plata</h2>
+        <br>
+        <button onclick="cambiar_video()">Cambiar video</button>
+    </div>
+    <script>
+        var count = 0;
+        var countxt = 0;
+        var btntxt = document.getElementById('btnTxt');
+        btntxt.addEventListener('click', () => {
+            if(countxt % 2 == 0){
+                btntxt.innerHTML = 'Gandalf el Mago'
+            }else{
+                btntxt.innerHTML = 'Fernando G. Sanchez'
+            }
+            countxt++;
+        })
+
+        document.getElementById('vid').play();
+        
+        function cambiar_video() {
+            var video = document.getElementById('vid')
+            video.pause();
+            if(count % 2 == 0){
+                video.src = './video/saxgandalf.mov'
+            }else{
+                video.src = './video/neon.mp4'
+            }
+            count++;
+            video.load();
+            video.play();
+        };
+        
+        
+
+    </script>
+    
+</body>
+</html>
