@@ -10,7 +10,7 @@ app = (() => {
         for (let index = 0; index < n; index++) {
             let button = document.createElement('button');
             button.innerHTML = 'Botones';
-            button.className = "btn m-3 btn-info btn-outline-primary btn-lg";
+            button.className = "btn m-5 pl-2 btn-info btn-outline-primary btn-lg";
             spawn.appendChild(button);
         }
     }
