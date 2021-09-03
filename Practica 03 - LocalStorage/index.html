@@ -9,24 +9,35 @@
 </head>
 <body>
     <body class="bg-secondary">
-        <div class="container mt-5">
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-4">
-                    <input type="text" id="number" class="form-control mb-4" value="1">
+        <div class="d-flex mt-5 justify-content-center">
+            <div class="d-flex flex-column bd-highlight mb-3">
+                <div class="p-2 bd-highlight">
+                    <input id="key" type="text" class="form-control" placeholder="Key">
                 </div>
-                <div class="col-2">
-                    <button id="destruccion" class="btn btn-info btn-outline-primary">Haz click!</button>
+                <div class="p-2 bd-highlight">
+                    <div class="form-check mt-3">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="r1" checked>
+                        <label class="form-check-label" for="flexRadioDefault1">
+                            <input id="valor" type="text" class="form-control" placeholder="Valor">
+                        </label>
+                    </div>
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="r2">
+                        <label class="form-check-label" for="flexRadioDefault2">
+                            <input id="img" type="File" class="form-control" placeholder="Imagen...">
+                        </label>
+                    </div>
                 </div>
-                <div class="col-3"></div>
-            </div>
-            <div class="row">
-                <div class="col-3"></div>
-                <div class="col-6" id="spawn">
+                <div class="p-2 bd-highlight">
+                    <button id="guardar" type="button" class="btn btn-primary btn-lg">Guardar</button>
+                    <button id="obtener" type="button" class="btn btn-primary btn-lg">Obtener</button>   
                 </div>
-                <div class="col-3"></div>
+                <div class="p-2 bd-highlight mt-5">
+                    <div id="spawn"></div> 
+                </div>
             </div>
         </div>
-    </div>
+
+    <script src="./lib/index.js"></script>
 </body>
 </html>
